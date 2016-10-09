@@ -389,8 +389,8 @@ int main(void)
     gpioInitStruc.GPIO_Pin = GPIO_Pin_5;
  800031a:	2320      	movs	r3, #32
  800031c:	607b      	str	r3, [r7, #4]
-    gpioInitStruc.GPIO_Speed = GPIO_Speed_400KHz;
- 800031e:	2300      	movs	r3, #0
+    gpioInitStruc.GPIO_Speed = GPIO_Speed_40MHz;
+ 800031e:	2303      	movs	r3, #3
  8000320:	727b      	strb	r3, [r7, #9]
 
     GPIO_Init(GPIOA, &gpioInitStruc);
@@ -398,7 +398,6 @@ int main(void)
  8000324:	4619      	mov	r1, r3
  8000326:	4805      	ldr	r0, [pc, #20]	; (800033c <main+0x3c>)
  8000328:	f7ff ff28 	bl	800017c <GPIO_Init>
-   // GPIO_SetBits(GPIOA, GPIO_Pin_5); zapnutie LED
 
   /* Infinite loop */
   while (1)

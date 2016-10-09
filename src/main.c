@@ -77,11 +77,9 @@ int main(void)
     gpioInitStruc.GPIO_Mode = GPIO_Mode_OUT;
     gpioInitStruc.GPIO_OType = GPIO_OType_PP;
     gpioInitStruc.GPIO_Pin = GPIO_Pin_5;
-    gpioInitStruc.GPIO_Speed = GPIO_Speed_400KHz;
+    gpioInitStruc.GPIO_Speed = GPIO_Speed_40MHz;
 
     GPIO_Init(GPIOA, &gpioInitStruc);
-
-   // GPIO_SetBits(GPIOA, GPIO_Pin_5); zapnutie LED
 
   /* Infinite loop */
   while (1)
