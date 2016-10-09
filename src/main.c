@@ -97,6 +97,14 @@ int main(void)
   /* Infinite loop */
   while (1)
   {
+	  GPIO_SetBits(GPIOA, GPIO_Pin_5);
+
+	  for (int j;j<999999;j++) {}
+
+	  GPIO_ResetBits(GPIOA, GPIO_Pin_5);
+
+	  for (int j;j<999999;j++) {}
+
 	i++;
   }
   return 0;
