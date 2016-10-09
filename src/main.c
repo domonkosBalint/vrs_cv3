@@ -97,6 +97,7 @@ int main(void)
   /* Infinite loop */
   while (1)
   {
+	  /* uloha 3_1
 	  GPIO_SetBits(GPIOA, GPIO_Pin_5);
 
 	  for (int j;j<999999;j++) {}
@@ -104,6 +105,16 @@ int main(void)
 	  GPIO_ResetBits(GPIOA, GPIO_Pin_5);
 
 	  for (int j;j<999999;j++) {}
+	   */
+
+	  //uloha3_2
+	  buttonState = GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13);
+
+	  if (buttonState == 0) {
+	  	  GPIO_SetBits(GPIOA, GPIO_Pin_5);
+	  } else if (buttonState == 1) {
+		  GPIO_ResetBits(GPIOA, GPIO_Pin_5);
+	  }
 
 	i++;
   }
